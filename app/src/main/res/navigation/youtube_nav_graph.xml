@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/youtube_nav_graph"
+    app:startDestination="@id/playlistFragment">
+
+    <fragment
+        android:id="@+id/playlistFragment"
+        android:name="com.azamat.youtube.ui.playlists.PlaylistFragment"
+        android:label="fragment_playlist"
+        tools:layout="@layout/fragment_playlist" >
+        <action
+            android:id="@+id/action_playlistFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+        <action
+            android:id="@+id/action_playlistFragment_to_connectionFragment"
+            app:destination="@id/connectionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.azamat.youtube.ui.details.DetailsFragment"
+        android:label="fragment_details"
+        tools:layout="@layout/fragment_details" >
+        <action
+            android:id="@+id/action_detailsFragment_to_videoFragment"
+            app:destination="@id/videoFragment" />
+        <action
+            android:id="@+id/action_detailsFragment_to_connectionFragment"
+            app:destination="@id/connectionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/savedFragment"
+        android:name="com.azamat.youtube.ui.saved.SavedFragment"
+        android:label="saved_fragment"
+        tools:layout="@layout/saved_fragment" />
+    <fragment
+        android:id="@+id/videoFragment"
+        android:name="com.azamat.youtube.ui.video.VideoFragment"
+        android:label="video_fragment"
+        tools:layout="@layout/video_fragment" >
+        <action
+            android:id="@+id/action_videoFragment_to_connectionFragment"
+            app:destination="@id/connectionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/connectionFragment"
+        android:name="com.azamat.youtube.ui.internet.ConnectionFragment"
+        android:label="connection_fragment"
+        tools:layout="@layout/connection_fragment" >
+        <action
+            android:id="@+id/action_connectionFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+        <action
+            android:id="@+id/action_connectionFragment_to_playlistFragment"
+            app:destination="@id/playlistFragment" />
+        <action
+            android:id="@+id/action_connectionFragment_to_videoFragment"
+            app:destination="@id/videoFragment" />
+        <action
+            android:id="@+id/action_connectionFragment_to_savedFragment"
+            app:destination="@id/savedFragment" />
+    </fragment>
+</navigation>
