@@ -9,6 +9,7 @@ import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 
 class Converters {
+
     @TypeConverter
     fun fromContent(data: String?): ContentDetails? {
         if(data == null) return null

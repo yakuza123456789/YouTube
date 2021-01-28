@@ -15,7 +15,4 @@ interface YouTubeDao {
     @Query("SELECT * FROM videos")
     fun getDetailslist(): MutableList<Item>
 
-    @Query("DELETE FROM videos")
-    fun deleteAll()
-
 }

@@ -12,7 +12,7 @@ import kotlinx.coroutines.Dispatchers
 
 class NetworkRepository {
 
-    val channelId = "UC_pwIXKXNm5KGhdEVzmY60A"
+    val channelId = "UCVVAnxQ2YMC_qlc7QfPA2YQ"
     val key  = API
     val part = "snippet,contentDetails"
     val maxResults = 10
@@ -67,7 +67,4 @@ class LocalRepository(context: Context){
         return youtubeDao.addDetailsList(list)
     }
 
-    fun deleteAll() {
-        youtubeDao.deleteAll()
-    }
 }
